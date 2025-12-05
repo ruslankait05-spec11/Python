@@ -1,0 +1,80 @@
+num = int(input("Введите целое число: "))
+if num < 0:
+    print(-num)
+elif num == 0:
+    print(1)
+else:
+    print(num)
+
+    s = input("Введите строку: ")
+if '.' in s or ',' in s:
+    print(True)
+else:
+    print(False)
+
+    a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+if a % 3 == 0 and b % 3 == 0:
+    print(True)
+elif a % 3 == 0 or b % 3 == 0:
+    print("Одно число делится на 3")
+else:
+    print(False)
+ 
+    2
+
+    n = int(input("Введите число: "))
+if n > 100:
+    print("*")
+elif n > 0:
+    print("*" * n)
+# для отрицательных чисел ничего не выводится
+
+s1 = input("Введите первую строку: ")
+s2 = input("Введите вторую строку: ")
+print(s1 == s2)
+
+num = int(input("Введите число: "))
+if num > 0:
+    print(num - 1, num, num +  1)
+else:
+    num = 1
+    print(num - 1, num, num + 1)
+
+file_name = input("Введите имя файла с расширением: ")
+extension = file_name.split('.')[-1]  # Берём часть после последней точки
+
+if extension == 'doc':
+    print("Word file")
+elif extension == 'py':
+    print("Python file")
+elif extension == 'txt':
+    print("Text file")
+else:
+    print("Unknown file type")
+
+a = float(input("Введите сторону a: "))
+b = float(input("Введите сторону b: "))
+c = float(input("Введите сторону c: "))
+
+if a == b == c:
+    print("Равносторонний треугольник")
+elif a == b or b == c or a == c:
+    print("Равнобедренный треугольник")
+else:
+    print("Разносторонний треугольник") а
+
+text = 'important information in one line'
+letter = input("Введите букву: ")
+print(letter in text)
+
+side1 = float(input("Введите первую сторону: "))
+side2 = float(input("Введите вторую сторону: "))
+
+if side1 == side2:
+    print("Квадрат")
+    print("Площадь:", side1 * side2)
+else:
+    print("Прямоугольник")
+    print("Площадь:", side1 * side2)
