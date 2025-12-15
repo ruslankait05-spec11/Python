@@ -1,0 +1,103 @@
+задание1
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print("matrix:")
+for row in matrix:
+    print(row)
+
+odd_numbers = []
+even_count = 0
+
+for row in matrix:
+    for num in row:
+        if num % 2 == 1:
+            odd_numbers.append(num)
+        else:
+            even_count += 1
+
+print("\nнечётные числа matrix:")
+print(" ".join(map(str, odd_numbers)))
+
+print("\nкол-во чётных:", even_count)
+
+matrix:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+
+нечётные числа matrix:
+1 3 5 7 9
+
+кол-во чётных: 4
+
+
+
+
+Задание2
+matrix_1 = [[2, 4, 3, 6], [5, 7, 1, 5]]
+matrix_2 = [[2, 9, 0, 2], [3, 4, 7, 6]]
+
+answer_matrix = []
+for i in range(len(matrix_1)):
+    row = []
+    for j in range(len(matrix_1[i])):
+        row.append(matrix_1[i][j] * matrix_2[i][j])
+    answer_matrix.append(row)
+
+print("answer_matrix:")
+for row in answer_matrix:
+    print(row)
+
+print()
+for row in answer_matrix:
+    row_sum = sum(row)
+    print(f"{row} сумма строки: {row_sum}")
+answer_matrix:
+[4, 36, 0, 12]
+[15, 28, 7, 30]
+
+[4, 36, 0, 12] сумма строки: 52
+[15, 28, 7, 30] сумма строки: 80
+
+
+
+
+
+Задание4 
+random_elements = [
+    ['toy', 'bee', 'cheese', 'ear'],
+    [False, 'word', '0110110', 10],
+    ['happiness', '(j °口°)', 'luck', None],
+    ['car', '<- code ->', 4.7, True]
+]
+
+print("Каждый второй элемент (с индексом 1, 3, ...):")
+for index, row in enumerate(random_elements):
+    if index % 2 == 1:  # каждая вторая строка (индексы 1 и 3)
+        print(f"Строка {index}: {row}")
+for index, row in enumerate(random_elements):
+    print(f"Строка {index}:")
+    for inner_index, element in enumerate(row):
+        if inner_index % 2 == 1:
+            print(f"  индекс {inner_index}: {element}")
+for i, row in enumerate(random_elements):
+    if i % 2 == 1:
+        print(row)
+
+
+        Задание3 
+        fruits = [
+    ['Banana', 'apple'],
+    ['apricot', 'Avocado'],
+    ['lime', 'lemon'],
+    ['Mango', 'grapes']
+]
+
+result = []
+for row in fruits:
+    for fruit in row:
+        if fruit and fruit[0].isupper():
+            result.append(fruit)
+
+print(result)
+['Banana', 'Avocado', 'Mango']
